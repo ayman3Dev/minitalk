@@ -6,14 +6,10 @@
 /*   By: aaaraba <aaaraba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 11:52:10 by aaaraba           #+#    #+#             */
-/*   Updated: 2024/04/20 22:24:04 by aaaraba          ###   ########.fr       */
+/*   Updated: 2024/05/20 20:54:12 by aaaraba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <signal.h>
-#include <unistd.h>
 #include "minitalk.h"
 
 void	signal_handler(int signum, siginfo_t *siginfo, void *context)
@@ -55,5 +51,5 @@ int	main(void)
 	sigaction(SIGUSR2, &sa, NULL);
 	sigaction(SIGUSR1, &sa, NULL);
 	while (1)
-		pause();
+		pause ();
 }
